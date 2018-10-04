@@ -12,4 +12,3 @@ run:
 
 clean:
 	rm *.o
-	rm *.c~

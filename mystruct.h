@@ -4,4 +4,6 @@ struct sgrade makestruct();
 
 void printstruct(struct sgrade s);
 
-void changestruct(struct sgrade s );
+void changename(struct sgrade *s, char *n);
+
+void changegrade(struct sgrade *s, int g);

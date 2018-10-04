@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 #include "mystruct.h"
 
@@ -16,11 +17,14 @@ struct sgrade makestruct(){
 }
 
 void printstruct(struct sgrade s){
-  printf("%s has grade %d\n", s.name, s.grd);
+  printf("Student %s has a grade of %d out of 100.\n", s.name, s.grd);
 }
 
-void changestruct(struct sgrade s){
-  s.grd++;
-//s.name = strncpy(name, newname, 8)
+void changename(struct sgrade *s, char *n){
+  strncpy(s->name, n, 8);
+}
+
+void changegrade(struct sgrade *s, int g){
+  s->grd = g;
 }
 
